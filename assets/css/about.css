@@ -1,0 +1,495 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+ 
+ font-family: 'Quicksand', sans-serif;
+ 
+    background-color:#443627;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+header.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+ 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+  z-index: 9999;
+}
+
+
+header.navbar-container div.logo {
+  display: flex;
+}
+
+header.navbar-container .logo img {
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+div.logo a img {
+  width: 100px;
+  top: -10px;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
+  
+}
+
+.nav-list {
+  width: 70%;
+  margin-left: 158px;
+}
+
+
+
+
+.image-container img:last-child {
+  opacity: 0; /* Home2 tersembunyi awalnya */
+}
+
+.image-container:hover img:last-child {
+  opacity: 1; /* Munculkan Home2 */
+}
+
+.image-container:hover img:first-child {
+  opacity: 0; /* Sembunyikan Home1 */
+}
+
+header nav.nav-list ul  {
+  padding-left: 0;
+ 
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+  margin-top: -5px;
+}
+
+
+header nav ul li {
+  list-style-type: none;
+  cursor: pointer;
+ }
+ 
+/* Navbar */
+.nav-list ul li {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-list ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F2F6D0;
+  text-decoration: none;
+  z-index: 1;
+}
+
+/* Efek dasar */
+.nav-list ul li {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-list ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #D98324;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out, right 0.3s ease-in-out;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+/* Nav 1: masuk dari kanan, keluar ke kanan */
+#nav-1::before {
+  right: 0;
+  left: auto;
+  border-radius: 50;
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  -ms-border-radius: 50;
+  -o-border-radius: 50;
+}
+
+#nav-1:hover::before {
+  width: 100%;
+}
+
+/* Nav 2: Efek akan dikontrol dengan JavaScript */
+#nav-2::before {
+  left: 0;
+  right: auto;
+  border-radius: 50;
+  width: 100%;
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  -ms-border-radius: 50;
+  -o-border-radius: 50;
+}
+
+/* Nav 3: masuk dari kiri, keluar ke kiri */
+#nav-3::before {
+  left: 0;
+  right: auto;
+  border-radius: 50;
+  -webkit-border-radius: 50;
+  -moz-border-radius: 50;
+  -ms-border-radius: 50;
+  -o-border-radius: 50;
+}
+
+#nav-3:hover::before {
+  width: 100%;
+}
+
+.nav-list ul li:hover a {
+  color: #443627;
+  background-color: #D98324;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+
+
+
+
+
+
+
+.nav-list ul li a {
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #F2F6D0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+    -moz-transition: color 0.3s ease, background-color 0.3s ease;
+    -ms-transition: color 0.3s ease, background-color 0.3s ease;
+    -o-transition: color 0.3s ease, background-color 0.3s ease;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+}
+
+
+
+
+main {
+  flex: 1;
+ 
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  margin-top: -50px;
+  margin-bottom: 40px;
+ 
+  display: flex;
+  align-items: center;
+}
+
+
+
+  
+main aside {
+  position: fixed;
+  right: 0px;
+  top: 35%;
+}
+
+
+main aside .social-media {
+  height: 100%;
+  display: flex;
+}
+ 
+
+main aside div.social-media ul {
+  padding: 1.5rem 1rem;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  margin: auto;
+  background-color: #D98324;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+main aside .social-media li {
+  list-style-type: none;
+}
+
+main aside .social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #EFDCAB;
+ 
+  transition: all 0.1s ease-in-out;
+}
+
+main aside .social-media li a:hover {
+  color:#443627 ;
+}
+
+/* Aside image style */
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+
+.social-media ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media ul li {
+  margin: 0 0px;
+}
+
+.social-media ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social-media ul li a:hover {
+  transform: scale(1.1);
+  background-color: #443627;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.img-aside {
+  width: 30px; /* Sedikit diperbesar */
+  height: 30px;
+}
+
+/*MAIN CONTAINT ABOUT*/
+
+.container-about {
+  max-width: 100%;
+}
+
+.container-header-about {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+strong.naufal {
+  color: #D98324;
+}
+
+strong.julian {
+  color: #EFDCAB;
+}
+
+div.container-header-about article p {
+  color: #F2F6D0;
+}
+
+.container-about-image img {
+  width: 350px;
+}
+
+ 
+
+article h1.h1-about {
+  font-size: 50px;
+}
+
+.container-about-image {
+  width: 0%;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+
+.rectangle {
+  width: 280px; 
+  height: 120px; 
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #333; 
+  display: block;
+  margin: auto;
+}
+
+
+footer {
+  border-top:3px solid white ;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 2px;
+  left: -10px;
+  padding: 0;
+  width: 110%;
+  height: 10vh;
+  background-color: #EFDCAB;
+  max-width: 1440;
+}
+
+
+
+.about-images {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px; /* Jarak antar gambar */
+  padding: 10px;
+  scrollbar-width: thin; /* Untuk browser yang mendukung */
+  scrollbar-color: #ccc transparent; /* Warna scrollbar */
+}
+
+/* Untuk Webkit (Chrome, Safari) */
+.about-images::-webkit-scrollbar {
+  height: 8px;
+}
+
+.about-images::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.about-images::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 4px;
+}
+
+/* Responsive: hanya aktif saat layar kecil */
+@media (max-width: 768px) {
+  .about-images {
+      overflow-x: scroll;
+  }
+}
+@media (max-width : 900px){
+    /*Container-about */
+    body {
+      overflow-y: auto;
+    }
+
+
+    .coontainer .about {
+      display: flex;
+      width: 100%;
+  
+    }
+
+
+    h1.about p {
+      max-width: 100%;
+    }
+
+  
+    .container-about-image {
+      order: -1;
+    }
+    
+    .container-header-about article {
+      margin-top: 80%;
+    }
+
+    .container-header-about article p{
+      margin-right: -100px;
+    }
+}
+
+@media (max-width: 768px){
+
+  body{
+    overflow: auto;
+  }
+
+  header.navbar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  header.navbar-container .logo {
+    margin-left: -35%;
+  }
+
+   
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    gap: 2rem;
+    margin-left: -55%;
+  }
+ 
+  main {
+    padding: 1rem 3rem;
+  }
+ 
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+ 
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+ 
+  main .content .content-description p {
+    font-size: 1rem;
+    margin-right: 20px;
+  }
+ 
+  main .content .content-image {
+    order: -1 ;
+  }
+
+  
+
+}

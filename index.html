@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- My Own CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="logo">
+            <a class="image-container" href="index.html">
+                <img src="assets/img/home1.png" onclick="showSection('home')" alt="Home Icon 1">
+                <img src="assets/img/home2.png" onclick="showSection('home')" alt="Home Icon 2">
+            </a>
+        </div>
+            
+        <nav class="nav-list">
+            <ul>
+                <li id="about"><a href="assets/about.html" class="nav-li-button">About</a></li>
+                <li id="projects"><a href="assets/projects.html" class="nav-li-button">Projects</a></li>
+                <li id="contact"><a href="assets/contact.html" class="nav-li-button">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HOME CONTENT -->
+        <div id="home" class="content" style="display: flex;">
+            <article class="content-description">
+                <h1 class="tittle">Julian Was Here</h1>
+                <p><strong>Panggil saya Julian</strong>, saya adalah seorang pembelajar teknologi yang terus berkembang.  
+                <mark>Dengan semangat eksplorasi dan inovasi, saya terus mencari cara untuk menciptakan dampak positif di dunia digital.</mark>  
+                Setiap langkah kecil membawa perubahan besar. Belajar, berkembang, dan terus maju adalah kunci untuk menciptakan masa depan yang lebih baik.  
+                Saya adalah seorang developer yang sedang belajar dan berkembang di dunia pemrograman.  
+                <mark>Dengan semangat pantang menyerah, saya percaya bahwa teknologi dapat mengubah dunia menjadi lebih baik.</mark></p>
+                <br>
+                <span class="simple-highlight">"Julian meninggalkan jejak di sini.<br> Jika kamu membaca ini, salam engineering!"</span>
+            </article>
+            <div class="content-image">
+                <img src="assets/img/logo.png" alt="Logo">
+            </div>
+        </div>
+
+        <!-- CONTENT ABOUT -->
+        <div id="about" class="container-about" style="display: none;">
+            <div class="container-header-about">
+                <article>
+                    <h1 class="h1-about">
+                        <strong class="naufal">Naufal</strong> <strong class="julian">Julian</strong>
+                    </h1>
+                    <p>
+                        I am a student of Informatics Engineering, Indraprasta PGRI University, class of 2023, domiciled in Depok, West Java, Indonesia.
+                    </p>
+                    <p>
+                        Passionate about programming since high school, I started learning web development self-taught. I love building, exploring new technologies, and solving challenges creatively.
+                    </p>
+                </article>
+                <div class="container-about-image">
+                    <img src="assets/img/img-about/profile.png" alt="Profile Picture">
+                </div>
+            </div>
+
+            <div class="about-images">
+                <img src="assets/img/img-about/photo1.png" class="rectangle" alt="Photo 1">
+                <img src="assets/img/img-about/photo2.png" class="rectangle" alt="Photo 2">
+                <img src="assets/img/img-about/photo3.png" class="rectangle" alt="Photo 3">
+                <img src="assets/img/img-about/photo4.png" class="rectangle" alt="Photo 4">
+                <img src="assets/img/img-about/photo5.png" class="rectangle" alt="Photo 5">
+                <img src="assets/img/img-about/photo6.png" class="rectangle" alt="Photo 6">
+            </div>
+        </div>
+
+        <!-- SOCIAL MEDIA SECTION -->
+        <aside>
+            <div class="social-media">
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/naufalpal28_?igsh=Z3RmMjV5b2E1MWMx"><img class="img-aside"  src="assets/img/img-aside/instagram.png" alt="Instagram"></a>
+                    </li>
+                    <li>  
+                        <a href="https://www.linkedin.com/in/muhammad-naufal-julian-8a5845294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img class="img-aside" src="assets/img/img-aside/linkedin.png" alt="LinkedIn"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.tiktok.com/@lookiicode?_t=ZS-8vCRXcbqD0k&_r=1"><img class="img-aside" src="assets/img/img-aside/tiktok.png" alt="TikTok"></a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/@im.lookii?si=eLc077cu990WynYV"><img class="img-aside" src="assets/img/img-aside/youtube.png" alt="YouTube"></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Julian. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
